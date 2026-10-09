@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Maqueta: que Google no la muestre en sus resultados -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>LexDigo — Tecnología para despachos y empresas</title>
+
+  <!-- Versión 2: una sola familia moderna (Geist) + su versión monoespaciada para detalles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="franja-maqueta">Propuesta de rediseño · Maqueta, no es la web oficial de LexDigo</div>
+
+  <!-- ============ CABECERA (se oscurece al bajar) ============ -->
+  <header id="cabecera">
+    <div class="contenedor nav">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#5CC8BA" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="31" cy="10" r="3.6"/><path d="M27.6 11.2C21 12 16 15 12.5 21"/><path d="M33 13.6C34.5 20 27 22 26 28"/>
+          <path d="M26 28c0 6 6 9 12 7 5-2 6-7 2-10-4-3-10-1-14 3z"/><path d="M32 36.5V46M36.5 35.5V46"/>
+        </svg>
+        lexdigo
+      </a>
+      <nav class="menu" aria-label="Menú principal">
+        <button class="menu-boton" data-mega="mega-plataforma" aria-expanded="false">Plataforma <svg viewBox="0 0 12 12"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <button class="menu-boton" data-mega="mega-sectores" aria-expanded="false">Sectores <svg viewBox="0 0 12 12"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <button class="menu-boton" data-mega="mega-servicios" aria-expanded="false">Servicios <svg viewBox="0 0 12 12"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <button class="menu-boton" data-mega="mega-recursos" aria-expanded="false">Recursos <svg viewBox="0 0 12 12"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <a href="planes.html">Planes</a>
+      </nav>
+      <div class="nav-acciones">
+        <a href="#" class="entrar">Acceso clientes</a>
+        <a href="#contacto" class="btn btn-cobre" aria-label="Hablar con un consultor"><span>Hablar con un consultor</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <button class="hamburguesa" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i></button>
+      </div>
+    </div>
+
+    <!-- ===== MEGA MENÚ: Plataforma (todas las funcionalidades de la web actual, reordenadas) ===== -->
+    <div class="mega" id="mega-plataforma">
+      <div class="contenedor mega-grid">
+        <div>
+          <h4 class="mono">Gestión y equipo</h4>
+          <a class="item" href="gestion-de-casos.html"><span class="ico-m"><i data-lucide="folder-open"></i></span><b>Expedientes y casos</b><small>Cada asunto, con todo su historial</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="calendar-days"></i></span><b>Calendario</b><small>Plazos, juicios y citas</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="list-checks"></i></span><b>Tareas</b><small>Quién hace qué y para cuándo</small></a>
+          <a class="item" href="gestion-de-contactos.html"><span class="ico-m"><i data-lucide="contact"></i></span><b>Contactos</b><small>Clientes y contrarios, ordenados</small></a>
+          <a class="item" href="colaboracion.html"><span class="ico-m"><i data-lucide="users"></i></span><b>Colaboración</b><small>Trabajo en equipo en tiempo real</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="clock"></i></span><b>Registro de jornada</b><small>Fichaje legal del equipo</small></a>
+        </div>
+        <div>
+          <h4 class="mono">Documentos</h4>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="files"></i></span><b>Gestión de documentos</b><small>Todo archivado y localizable</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="layout-template"></i></span><b>Plantillas</b><small>Tus modelos, listos para usar</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="file-cog"></i></span><b>Automatización documental</b><small>Escritos que se rellenan solos</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="scale"></i></span><b>Formularios judiciales</b><small>Modelos oficiales actualizados</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="signature"></i></span><b>Firma electrónica</b><small>Firma avanzada sin papel</small></a>
+        </div>
+        <div>
+          <h4 class="mono">Finanzas</h4>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="receipt"></i></span><b>Facturación</b><small>Factura electrónica en un clic</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="credit-card"></i></span><b>Pagos online</b><small>Cobra antes y sin perseguir</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="timer"></i></span><b>Tiempos y gastos</b><small>Cada hora, registrada</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="chart-column"></i></span><b>Informes financieros</b><small>Cómo va tu negocio, de un vistazo</small></a>
+        </div>
+        <div>
+          <h4 class="mono">Clientes</h4>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="layout-dashboard"></i></span><b>Portal de cliente</b><small>Tu cliente consulta su asunto</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="calendar-check"></i></span><b>Reserva de citas</b><small>Agenda online sin llamadas</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="user-plus"></i></span><b>Admisión de clientes</b><small>Altas y datos sin papeleo</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="heart-handshake"></i></span><b>Relación con clientes (CRM)</b><small>Seguimiento de cada cliente</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="message-square"></i></span><b>Comunicación</b><small>Mensajes y avisos centralizados</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="workflow"></i></span><b>Flujos y correo automáticos</b><small>Lo repetitivo, que se haga solo</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="map-pin"></i></span><b>Anuncios locales de Google</b><small>Aparece cuando te buscan cerca</small></a>
+        </div>
+        <div class="mega-destacado">
+          <h4 class="mono">IA e integraciones</h4>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="sparkles"></i></span><b>Copiloto Legal <span class="nuevo">NUEVO</span></b><small>Resume escritos y detecta plazos</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="bot"></i></span><b>Asistente de documentos legales</b><small>Redacta y revisa contigo</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="inbox"></i></span><b>LexNet</b><small>Notificaciones dentro de la plataforma</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="plug"></i></span><b>Integraciones</b><small>Conecta tus herramientas</small></a>
+          <a class="ver-todo" href="#plataforma">Ver todas las funcionalidades →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MEGA MENÚ: Sectores (une "Servicios" y "Empresas" de la web actual) ===== -->
+    <div class="mega" id="mega-sectores">
+      <div class="contenedor mega-grid mega-sectores">
+        <div>
+          <h4 class="mono">Por sector</h4>
+          <div class="dos-columnas">
+            <a class="item" href="#sectores"><span class="ico-m"><i data-lucide="gavel"></i></span><b>Despachos de abogados</b><small>Plazos, LexNet y expedientes</small></a>
+            <a class="item" href="#sectores"><span class="ico-m"><i data-lucide="briefcase"></i></span><b>Consultoras</b><small>Proyectos y horas facturables</small></a>
+            <a class="item" href="#sectores"><span class="ico-m"><i data-lucide="calculator"></i></span><b>Asesorías y gestorías</b><small>Clientes y documentación</small></a>
+            <a class="item" href="#sectores"><span class="ico-m"><i data-lucide="building-2"></i></span><b>Administración de fincas</b><small>Comunidades, juntas y actas</small></a>
+            <a class="item" href="#sectores"><span class="ico-m"><i data-lucide="users-round"></i></span><b>Empresas con plantilla</b><small>Equipo, jornada y tareas</small></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="mono">Por tamaño</h4>
+          <a class="item" href="planes.html"><span class="ico-m"><i data-lucide="user"></i></span><b>Autónomos</b><small>Empieza desde 24 €/mes</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="store"></i></span><b>Pequeñas empresas</b><small>Orden desde el primer día</small></a>
+          <a class="item" href="#metodo"><span class="ico-m"><i data-lucide="building"></i></span><b>Medianas y grandes</b><small>Implantación a medida</small></a>
+        </div>
+        <div class="mega-destacado">
+          <h4 class="mono">¿No ves tu sector?</h4>
+          <p>Adaptamos la plataforma a cómo trabaja tu equipo.</p>
+          <a class="ver-todo" href="#contacto">Hablar con un consultor →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MEGA MENÚ: Servicios (los mismos 5 de la web actual) ===== -->
+    <div class="mega" id="mega-servicios">
+      <div class="contenedor mega-grid mega-sectores">
+        <div>
+          <h4 class="mono">Software por profesión</h4>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="scale"></i></span><b>Software para abogados</b><small>Expedientes, plazos y LexNet</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="calculator"></i></span><b>Software para gestoría</b><small>Clientes, trámites y documentación</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="stamp"></i></span><b>Software para procuradores</b><small>Notificaciones y plazos al día</small></a>
+        </div>
+        <div>
+          <h4 class="mono">Servicios adicionales</h4>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="shield-check"></i></span><b>Canal de denuncias</b><small>Cumple la ley de protección al informante</small></a>
+          <a class="item" href="#"><span class="ico-m"><i data-lucide="bot-message-square"></i></span><b>Chatbot + web de captación <span class="nuevo">NUEVO</span></b><small>Clientes nuevos, 24 horas al día</small></a>
+        </div>
+        <div class="mega-destacado">
+          <h4 class="mono">Implantación</h4>
+          <p>Diagnóstico, puesta en marcha, formación y acompañamiento.</p>
+          <a class="ver-todo" href="#metodo">Ver cómo trabajamos →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MEGA MENÚ: Recursos ===== -->
+    <div class="mega" id="mega-recursos">
+      <div class="contenedor mega-grid mega-sectores">
+        <div>
+          <h4 class="mono">Aprende</h4>
+          <div class="dos-columnas">
+            <a class="item" href="#"><span class="ico-m"><i data-lucide="newspaper"></i></span><b>Blog</b><small>Gestión, tecnología y novedades legales</small></a>
+            <a class="item" href="#"><span class="ico-m"><i data-lucide="graduation-cap"></i></span><b>Academy</b><small>Manual de uso paso a paso</small></a>
+            <a class="item" href="#"><span class="ico-m"><i data-lucide="bell"></i></span><b>Novedades</b><small>Lo último de la plataforma</small></a>
+            <a class="item" href="#"><span class="ico-m"><i data-lucide="languages"></i></span><b>English</b><small>Website in English</small></a>
+          </div>
+        </div>
+        <div></div>
+        <div class="mega-destacado">
+          <h4 class="mono">Soporte</h4>
+          <p>¿Ya eres cliente? Entra en tu cuenta o escríbenos.</p>
+          <a class="ver-todo" href="#">Acceso clientes →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Menú móvil (se rellena solo con JavaScript a partir de los mega menús) ===== -->
+    <div class="menu-movil" id="menu-movil"></div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="contenedor">
+      <span class="aviso"><b>NUEVO</b> Copiloto con IA: resume escritos y detecta plazos</span>
+      <h1>Tu despacho, en orden. <span class="tenue">Tu equipo, a lo importante.</span></h1>
+      <div class="hero-pie">
+        <p>Una sola plataforma para expedientes, documentos, equipo y facturación. Y un equipo que la pone en marcha contigo.</p>
+        <div class="botones">
+          <a href="#contacto" class="btn btn-cobre">Hablar con un consultor
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <a href="#plataforma" class="btn btn-fantasma">Ver la plataforma</a>
+        </div>
+      </div>
+
+      <!-- Ventana de la app + tarjetas flotantes -->
+      <div class="escena">
+        <div class="ventana" aria-label="Vista de ejemplo de la plataforma">
+          <div class="barra-lateral">
+            <div class="puntos"><i></i><i></i><i></i></div>
+            <span class="activo">Inicio</span>
+            <span>Expedientes <em>128</em></span>
+            <span>Documentos</span>
+            <span>Calendario <em>14</em></span>
+            <span>Facturación</span>
+            <span>Equipo y jornada</span>
+            <span>Portal de clientes</span>
+          </div>
+          <div class="panel">
+            <div class="panel-cab"><h3>Buenos días</h3><span class="buscador">Buscar expediente, cliente…</span></div>
+            <div class="kpis">
+              <div class="kpi"><small>Expedientes activos</small><b>128</b><div class="barra"><i style="width:72%"></i></div></div>
+              <div class="kpi"><small>Plazos esta semana</small><b>14</b><div class="barra"><i style="width:40%;background:#E4683A"></i></div></div>
+              <div class="kpi"><small>Facturado este mes</small><b>86 %</b><div class="barra"><i style="width:86%"></i></div></div>
+            </div>
+            <div class="tabla">
+              <div><span>Asunto</span><span>Responsable</span><span>Estado</span></div>
+              <div><span>Recurso de apelación · Ref. 2231</span><span>Litigación</span><span class="estado urgente">Vence en 3 días</span></div>
+              <div><span>Junta de propietarios · C/ Real 14</span><span>Administración</span><span class="estado ok">Acta lista</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flotante f-ia">
+          <div class="ico">✦</div>
+          <div><b>Copiloto IA</b><small>He encontrado 2 plazos en el escrito de demanda. ¿Los añado al calendario?</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTORES (pestañas) ============ -->
+  <section id="sectores" class="clara">
+    <div class="contenedor">
+      <div class="titulo-seccion aparece">
+        <div><span class="mono etiqueta">/ SECTORES</span><h2>Cada negocio tiene su caos. Lo ordenamos.</h2></div>
+        <p>Configuramos la plataforma para cómo trabaja tu sector, no al revés.</p>
+      </div>
+
+      <div class="pestanas aparece">
+        <div class="lista-pestanas" role="tablist">
+          <button class="pestana" role="tab" aria-selected="true" data-panel="p-abogados">Despachos de abogados <span class="mono">→</span></button>
+          <button class="pestana" role="tab" aria-selected="false" data-panel="p-consultoras">Consultoras y asesorías <span class="mono">→</span></button>
+          <button class="pestana" role="tab" aria-selected="false" data-panel="p-fincas">Administración de fincas <span class="mono">→</span></button>
+          <button class="pestana" role="tab" aria-selected="false" data-panel="p-empresas">Empresas con plantilla <span class="mono">→</span></button>
+        </div>
+
+        <div class="contenido-pestana" id="p-abogados" role="tabpanel">
+          <div><h3>Ningún plazo se te escapa</h3><p>Expedientes, escritos y notificaciones de LexNet conectados en un mismo lugar.</p></div>
+          <div class="mini-ui"><div class="fila">Notificación LexNet <em>Hoy</em></div><div class="fila">Plazo: contestación <em>20 días</em></div><div class="fila">Escrito resumido por IA <em>Listo</em></div></div>
+        </div>
+        <div class="contenido-pestana" id="p-consultoras" role="tabpanel" hidden>
+          <div><h3>Cada hora, facturada</h3><p>Clientes, proyectos y horas bajo control, con informes que se hacen solos.</p></div>
+          <div class="mini-ui"><div class="fila">Horas este mes <em>312 h</em></div><div class="fila">Pendiente de facturar <em>3 clientes</em></div><div class="fila">Informe mensual <em>Enviado</em></div></div>
+        </div>
+        <div class="contenido-pestana" id="p-fincas" role="tabpanel" hidden>
+          <div><h3>Comunidades sin papeleo</h3><p>Juntas, actas, incidencias y comunicaciones con propietarios, todo ordenado.</p></div>
+          <div class="mini-ui"><div class="fila">Junta C/ Real 14 <em>Jueves</em></div><div class="fila">Actas pendientes de firma <em>2</em></div><div class="fila">Incidencias abiertas <em>5</em></div></div>
+        </div>
+        <div class="contenido-pestana" id="p-empresas" role="tabpanel" hidden>
+          <div><h3>Tu equipo, al día y en regla</h3><p>Registro de jornada obligatorio, tareas y documentación del personal sin hojas de cálculo.</p></div>
+          <div class="mini-ui"><div class="fila">Fichajes de hoy <em>24 / 25</em></div><div class="fila">Vacaciones pendientes <em>3</em></div><div class="fila">Informe para inspección <em>Listo</em></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLATAFORMA (mosaico) ============ -->
+  <section id="plataforma" class="clara" style="padding-top:0">
+    <div class="contenedor">
+      <div class="titulo-seccion aparece">
+        <div><span class="mono etiqueta">/ PLATAFORMA</span><h2>Una sola herramienta. Todo el trabajo.</h2></div>
+        <p>Deja de saltar entre programas, carpetas y correos.</p>
+      </div>
+      <div class="mosaico">
+        <div class="pieza ancho-4 aparece" tabindex="0">
+          <span class="ico-p"><i data-lucide="folder-open"></i></span><h3>Expedientes y plazos</h3><p>Cada asunto con su historial, documentos, tareas y vencimientos.</p>
+          <div class="visual linea-tiempo"><div class="hecho">Alta</div><div class="hecho">Demanda</div><div class="ahora">Plazo · 3 días</div><div>Vista</div></div>
+        </div>
+        <div class="pieza ancho-2 oscura aparece" tabindex="0">
+          <span class="ico-p"><i data-lucide="sparkles"></i></span><h3>Copiloto IA</h3>
+          <div class="visual"><div class="burbuja usuario">¿Qué plazos hay en este escrito?</div><div class="burbuja ia">Dos: contestación en 20 días y aportación de pruebas en 10.</div></div>
+        </div>
+        <div class="pieza ancho-3 aparece" tabindex="0">
+          <span class="ico-p"><i data-lucide="receipt"></i></span><h3>Facturación</h3><p>Electrónica, con pagos online.</p>
+          <div class="visual barras"><i style="height:40%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:88%"></i></div>
+        </div>
+        <div class="pieza ancho-2 verde aparece" tabindex="0">
+          <span class="ico-p"><i data-lucide="signature"></i></span><h3>Firma electrónica</h3><p>Firma avanzada sin imprimir nada.</p>
+          <div class="visual firma"><span>Contrato_2231.pdf</span><span>✓ Firmado</span></div>
+        </div>
+      </div>
+      <a href="#" class="ver-todas aparece" data-abrir-mega="mega-plataforma">Ver las más de 25 funcionalidades →</a>
+    </div>
+  </section>
+
+  <!-- ============ MÉTODO (título fijo a la izquierda) ============ -->
+  <section id="metodo" class="metodo">
+    <div class="contenedor metodo-grid">
+      <div class="metodo-fijo">
+        <span class="mono etiqueta">/ MÉTODO</span>
+        <h2>No te dejamos solo con un programa.</h2>
+        <p>Un equipo de consultores lo pone en marcha contigo y se queda a tu lado mientras creces.</p>
+        <a href="#contacto" class="btn btn-cobre">Empezar por el diagnóstico
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+      <div>
+        <div class="paso aparece"><span class="mono">DIAGNÓSTICO</span><div><h3>Entendemos tu forma de trabajar</h3></div></div>
+        <div class="paso aparece"><span class="mono">IMPLANTACIÓN</span><div><h3>Lo configuramos y migramos todo</h3></div></div>
+        <div class="paso aparece"><span class="mono">FORMACIÓN</span><div><h3>Cada persona, a su ritmo</h3></div></div>
+        <div class="paso aparece"><span class="mono">ACOMPAÑAMIENTO</span><div><h3>Un gestor de cuenta para ti</h3></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIO (pendiente de cliente real) ============ -->
+  <section class="cita">
+    <div class="contenedor aparece">
+      <blockquote>“[Aquí irá el testimonio de un cliente real: qué problema tenía y qué ha cambiado desde que trabaja con nosotros.]”</blockquote>
+      <div class="autor"><div class="avatar"></div>[Nombre] · [Cargo, despacho o empresa]</div>
+    </div>
+  </section>
+
+  <!-- ============ PLANES (puerta de entrada, discreta) ============ -->
+  <div id="planes" class="planes">
+    <div class="contenedor">
+      <div class="planes-caja aparece">
+        <div><h3>¿Despacho pequeño o profesional independiente?</h3><p>Empieza con los planes estándar desde 24 €/mes. Prueba gratis 7 días.</p></div>
+        <a href="planes.html" class="btn btn-tinta">Ver planes</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PIE con llamada final y marca gigante ============ -->
+  <footer id="contacto">
+    <div class="contenedor">
+      <!-- Formulario de contacto / prueba gratis (mismos campos que /formulario-de-precios/ de la web actual) -->
+      <div class="cierre cierre-form">
+        <div class="cierre-texto">
+          <h2>Hablemos de cómo trabaja tu equipo.</h2>
+          <p>Prueba LexDigo gratis 7 días o reserva una demo de 30 minutos con un consultor.</p>
+          <ul>
+            <li>Sin compromiso</li>
+            <li>Cancela cuando quieras</li>
+            <li>Un consultor te acompaña desde el primer día</li>
+          </ul>
+        </div>
+        <form class="formulario" id="formulario-precios">
+          <fieldset class="interes">
+            <legend class="mono">¿Qué te interesa?</legend>
+            <label><input type="radio" name="interes" value="demo" checked> Demo con un consultor</label>
+            <label><input type="radio" name="interes" value="prueba"> Prueba gratis 7 días</label>
+          </fieldset>
+          <div class="campos">
+            <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="given-name"></label>
+            <label>Apellidos<input type="text" name="apellidos" placeholder="Tus apellidos" required autocomplete="family-name"></label>
+            <label>Correo electrónico<input type="email" name="email" placeholder="nombre@empresa.com" required autocomplete="email"></label>
+            <label>Teléfono<input type="tel" name="telefono" placeholder="600 000 000" required autocomplete="tel"></label>
+            <label>Tamaño de tu equipo
+              <select name="tamano" required>
+                <option value="" selected disabled>Selecciona</option>
+                <option>Solo yo</option>
+                <option>2 a 4 personas</option>
+                <option>5 a 9 personas</option>
+                <option>10 a 19 personas</option>
+                <option>20 a 99 personas</option>
+                <option>100 a 500 personas</option>
+                <option>Más de 500</option>
+              </select>
+            </label>
+            <label>Código promocional <span class="opcional">(opcional)</span><input type="text" name="codigo" placeholder="Si tienes uno"></label>
+          </div>
+          <label class="casilla"><input type="checkbox" name="privacidad" required> He leído y acepto la <a href="#">política de privacidad</a>.</label>
+          <label class="casilla"><input type="checkbox" name="noticias"> Quiero recibir noticias y novedades de LexDigo.</label>
+          <button type="submit" class="btn btn-cobre enviar">Enviar
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+          <div class="gracias" hidden>
+            <b>¡Gracias!</b>
+            <p>Hemos recibido tus datos. Te contactaremos muy pronto.</p>
+            <small class="mono">(Maqueta: el formulario no envía nada todavía)</small>
+          </div>
+        </form>
+      </div>
+      <div class="pie-cols">
+        <div><b>lexdigo</b>Av. de A Coruña 21, 27001 Lugo<br>982 48 04 72 · info@lexdigo.com</div>
+        <div><b>Sectores</b><a href="#sectores">Abogados</a><a href="#sectores">Consultoras</a><a href="#sectores">Fincas</a><a href="#sectores">Empresas</a></div>
+        <div><b>Producto</b><a href="#plataforma">Plataforma</a><a href="#">Copiloto IA</a><a href="planes.html">Planes</a></div>
+        <div><b>Empresa</b><a href="#metodo">Método</a><a href="#">Blog</a><a href="#">Contacto</a></div>
+      </div>
+      <div class="marca-gigante" aria-hidden="true">lexdigo</div>
+      <div class="legal"><span>© 2026 LegalMit, S.L.</span><span>Aviso legal · Privacidad · Cookies</span></div>
+    </div>
+  </footer>
+
+  <!-- Iconos Lucide (en la web real se descargan los SVG y se suben a WordPress) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="app.js"></script>
+</body>
+</html>

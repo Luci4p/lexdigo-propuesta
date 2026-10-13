@@ -170,7 +170,7 @@ section.clara { padding: 128px 0; }
 .mini-ui .fila em { font-style: normal; color: var(--verde-luz); font-size: 12px; white-space: nowrap; }
 
 /* ===== Mosaico (bento) de la plataforma ===== */
-.mosaico { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.mosaico { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .pieza { background: var(--blanco); border: 1px solid var(--linea); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px; overflow: hidden; min-height: 260px; }
 .pieza.compacta { min-height: 0; }
 .pieza h3 { font-size: 24px; letter-spacing: -.025em; }
@@ -563,3 +563,70 @@ body { padding-bottom: 28px; }
   .franja-maqueta { font-size: 11px; padding: 6px 10px; }
   body { padding-bottom: 46px; }
 }
+
+/* Botón de idioma ES | EN */
+.idioma { font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.8); border: 1px solid rgba(255,255,255,.2); border-radius: 8px; padding: 7px 9px; }
+.idioma:hover { color: #fff; border-color: rgba(255,255,255,.5); }
+@media (max-width: 640px) { .idioma { padding: 10px 9px; } }
+
+/* Capturas reales de la aplicación en "Cómo funciona" */
+.captura { display: block; width: 100%; height: auto; cursor: zoom-in; border-radius: 12px; border: 1px solid var(--linea); background: #fff; margin-bottom: 10px; box-shadow: 0 12px 30px -20px rgba(10,17,30,.35); }
+
+/* Visor de capturas a pantalla completa (se abre al pulsar una captura) */
+.visor { position: fixed; inset: 0; z-index: 200; background: rgba(10,17,30,.88); display: grid; place-items: center; padding: 24px; opacity: 0; pointer-events: none; transition: opacity .2s; cursor: zoom-out; }
+.visor.abierto { opacity: 1; pointer-events: auto; }
+.visor img { max-width: min(1400px, 100%); max-height: 100%; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,.5); background: #fff; }
+.visor button { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.12); color: #fff; font-size: 24px; line-height: 1; }
+
+/* Etiqueta de contenido provisional (páginas de ejemplo) */
+.provisional { display: inline-block; margin-top: 16px; padding: 6px 12px; border-radius: 999px; background: rgba(228,104,58,.15); border: 1px dashed #F3916B; color: #F3916B; font-size: 13px; font-weight: 600; }
+
+/* =====================================================================
+   INFOGRAFÍA: recorrido de beneficios (bloque opcional de la plantilla)
+   ===================================================================== */
+.infografia { background: var(--noche); color: #fff; padding: 112px 0; position: relative; overflow: hidden; }
+.infografia::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--linea-oscura) 1px, transparent 1px), linear-gradient(90deg, var(--linea-oscura) 1px, transparent 1px); background-size: 64px 64px; -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, #000 20%, transparent 75%); }
+.infografia .contenedor { position: relative; }
+.infografia .etiqueta { color: var(--verde-luz); }
+.infografia h2 { font-size: clamp(32px, 4.4vw, 56px); max-width: 640px; margin-bottom: 64px; }
+.info-recorrido { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
+/* La línea que une los cuatro nodos */
+.info-recorrido::before { content: ""; position: absolute; top: 32px; left: 32px; right: calc(25% - 56px); height: 2px; background: linear-gradient(90deg, var(--verde-luz), var(--cobre)); opacity: .55; }
+.info-recorrido li { position: relative; display: flex; flex-direction: column; gap: 10px; }
+.info-nodo { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--noche); border: 2px solid var(--verde-luz); color: var(--verde-luz); position: relative; z-index: 1; margin-bottom: 14px; }
+.info-recorrido li:last-child .info-nodo { border-color: var(--cobre); color: var(--cobre); }
+.info-nodo svg { width: 26px; height: 26px; stroke-width: 1.6; }
+.info-num { color: rgba(255,255,255,.45); }
+.info-recorrido h3 { font-size: 22px; letter-spacing: -.02em; }
+.info-recorrido p { color: rgba(255,255,255,.62); font-size: 15px; max-width: 260px; }
+@media (max-width: 1000px) {
+  .info-recorrido { grid-template-columns: 1fr 1fr; row-gap: 48px; }
+  .info-recorrido::before { display: none; }
+}
+@media (max-width: 640px) {
+  .infografia { padding: 64px 0; }
+  .infografia h2 { margin-bottom: 36px; }
+  /* En móvil, el recorrido es vertical */
+  .info-recorrido { grid-template-columns: 1fr; row-gap: 28px; padding-left: 0; }
+  .info-recorrido::before { display: block; top: 24px; bottom: 24px; left: 23px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, var(--verde-luz), var(--cobre)); }
+  .info-recorrido li { display: grid; grid-template-columns: 48px 1fr; column-gap: 16px; row-gap: 4px; }
+  .info-nodo { width: 48px; height: 48px; grid-row: span 3; margin: 0; }
+  .info-nodo svg { width: 20px; height: 20px; }
+  .info-recorrido h3 { font-size: 19px; }
+}
+@media (max-width: 640px) {
+  /* Línea vertical por tramos: une cada nodo con el siguiente y acaba en el último */
+  .info-recorrido::before { display: none; }
+  .info-recorrido li:not(:last-child)::after { content: ""; position: absolute; left: 23px; top: 48px; bottom: -28px; width: 2px; background: var(--verde-luz); opacity: .55; }
+  .info-recorrido li:nth-child(3)::after { background: linear-gradient(180deg, var(--verde-luz), var(--cobre)); }
+}
+
+/* Menú: página y sección en la que estás */
+.menu-boton.seccion-actual, .menu > a.actual { color: #fff; box-shadow: inset 0 -2px 0 var(--cobre); border-radius: 8px 8px 0 0; }
+.mega .item.actual { background: var(--hueso); }
+.mega .item.actual b::after { content: " · Estás aquí"; font-weight: 500; font-size: 12px; color: var(--cobre); }
+html[lang="en"] .mega .item.actual b::after { content: " · You are here"; }
+.mega-destacado .item.actual { background: rgba(255,255,255,.08); }
+
+/* Pasos sin imagen (p. ej. «¿Quién está obligado?» o planes): tarjeta con borde superior */
+.paso-texto { background: var(--blanco); border: 1px solid var(--linea); border-top: 3px solid var(--cobre); border-radius: 16px; padding: 24px; }

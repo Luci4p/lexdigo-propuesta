@@ -1,4 +1,11 @@
 // Comportamiento compartido por todas las páginas de la maqueta LexDigo
+
+// 0. Idioma de la página (las páginas en inglés están en la carpeta en/ con <html lang="en">)
+const EN = document.documentElement.lang === 'en';
+const T = (es, en) => EN ? en : es;
+// Los enlaces ES | EN llevan a la misma página en el otro idioma
+const archivoActual = location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('[data-cambiar-idioma]').forEach(a => { a.href = (EN ? '../' : 'en/') + archivoActual; });
 // Marca que hay JavaScript (las animaciones solo se activan si funciona)
 document.documentElement.classList.add('js');
 
@@ -56,7 +63,7 @@ botonesMenu.forEach(boton => {
   grupo.append(titulo, lista);
   menuMovil.appendChild(grupo);
 });
-menuMovil.insertAdjacentHTML('beforeend', '<a href="planes.html">Planes</a><a href="#contacto" class="btn btn-cobre">Hablar con un consultor</a>');
+menuMovil.insertAdjacentHTML('beforeend', `<a href="planes.html">${T('Planes', 'Pricing')}</a><a href="#contacto" class="btn btn-cobre">${T('Hablar con un consultor', 'Talk to a consultant')}</a>`);
 const cerrarMovil = () => { menuMovil.classList.remove('abierto'); hamburguesa.setAttribute('aria-expanded', 'false'); cabecera.classList.remove('menu-abierto'); };
 hamburguesa.addEventListener('click', () => {
   const abrir = !menuMovil.classList.contains('abierto');
@@ -88,7 +95,7 @@ if (window.lucide) lucide.createIcons();
 // 5. Enlaces que aún no tienen página: en vez de no hacer nada, avisan
 const aviso = document.createElement('div');
 aviso.className = 'aviso-flotante';
-aviso.textContent = 'Página en preparación: esta maqueta aún no la incluye';
+aviso.textContent = T('Página en preparación: esta maqueta aún no la incluye', 'Page coming soon: not included in this mockup yet');
 document.body.appendChild(aviso);
 let temporizadorAviso;
 document.addEventListener('click', e => {
@@ -118,16 +125,16 @@ const formulario = document.getElementById('formulario-precios');
 if (formulario) {
   const botonEnviar = formulario.querySelector('.enviar');
   formulario.querySelectorAll('input[name="interes"]').forEach(r => r.addEventListener('change', () => {
-    botonEnviar.firstChild.textContent = r.value === 'prueba' ? 'Empezar prueba gratis ' : 'Pedir mi demo ';
+    botonEnviar.firstChild.textContent = r.value === 'prueba' ? T('Empezar prueba gratis ', 'Start free trial ') : T('Pedir mi demo ', 'Book my demo ');
   }));
-  botonEnviar.firstChild.textContent = 'Pedir mi demo ';
+  botonEnviar.firstChild.textContent = T('Pedir mi demo ', 'Book my demo ');
   formulario.addEventListener('submit', e => {
     e.preventDefault();
     formulario.classList.add('intentado');
     if (!formulario.checkValidity()) { formulario.reportValidity(); return; }
     formulario.querySelectorAll('.interes, .campos, .casilla, .enviar').forEach(el => el.hidden = true);
     const nombre = formulario.nombre.value.trim();
-    formulario.querySelector('.gracias b').textContent = `¡Gracias, ${nombre}!`;
+    formulario.querySelector('.gracias b').textContent = T(`¡Gracias, ${nombre}!`, `Thank you, ${nombre}!`);
     formulario.querySelector('.gracias').hidden = false;
     formulario.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
@@ -141,4 +148,31 @@ document.querySelectorAll('.selector-pago button').forEach(boton => {
     boton.setAttribute('aria-pressed', 'true');
     document.querySelectorAll('[data-anual]').forEach(precio => { precio.textContent = precio.dataset[boton.dataset.pago]; });
   });
+});
+
+// 9. Capturas: al pulsar una, se abre en grande (Escape o clic para cerrar)
+const capturas = document.querySelectorAll('img.captura');
+if (capturas.length) {
+  const visor = document.createElement('div');
+  visor.className = 'visor';
+  visor.innerHTML = `<img alt=""><button type="button" aria-label="${T('Cerrar', 'Close')}">×</button>`;
+  document.body.appendChild(visor);
+  const cerrarVisor = () => visor.classList.remove('abierto');
+  capturas.forEach(img => img.addEventListener('click', () => {
+    visor.querySelector('img').src = img.src;
+    visor.querySelector('img').alt = img.alt;
+    visor.classList.add('abierto');
+  }));
+  visor.addEventListener('click', cerrarVisor);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarVisor(); });
+}
+
+// 10. El menú marca en qué página estás (sección y enlace resaltados)
+document.querySelectorAll('.mega .item, .menu > a').forEach(enlace => {
+  const destino = (enlace.getAttribute('href') || '').split('#')[0];
+  if (destino && destino === archivoActual) {
+    enlace.classList.add('actual');
+    const mega = enlace.closest('.mega');
+    if (mega) document.querySelector(`.menu-boton[data-mega="${mega.id}"]`)?.classList.add('seccion-actual');
+  }
 });

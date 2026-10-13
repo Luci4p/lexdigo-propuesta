@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos.css?v=8">
 </head>
 <body>
   <div class="franja-maqueta">Propuesta de rediseño · Maqueta, no es la web oficial de LexDigo</div>
@@ -31,8 +31,9 @@
         <a href="planes.html">Planes</a>
       </nav>
       <div class="nav-acciones">
+        <a href="en/index.html" class="idioma" data-cambiar-idioma hreflang="en" lang="en" aria-label="Read in English">EN</a>
         <a href="#" class="entrar">Acceso clientes</a>
-        <a href="index.html#contacto" class="btn btn-cobre" aria-label="Hablar con un consultor"><span>Hablar con un consultor</span>
+        <a href="#contacto" class="btn btn-cobre" aria-label="Hablar con un consultor"><span>Hablar con un consultor</span>
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         <button class="hamburguesa" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i></button>
       </div>
@@ -48,7 +49,7 @@
           <a class="item" href="#"><span class="ico-m"><i data-lucide="list-checks"></i></span><b>Tareas</b><small>Quién hace qué y para cuándo</small></a>
           <a class="item" href="gestion-de-contactos.html"><span class="ico-m"><i data-lucide="contact"></i></span><b>Contactos</b><small>Clientes y contrarios, ordenados</small></a>
           <a class="item" href="colaboracion.html"><span class="ico-m"><i data-lucide="users"></i></span><b>Colaboración</b><small>Trabajo en equipo en tiempo real</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="clock"></i></span><b>Registro de jornada</b><small>Fichaje legal del equipo</small></a>
+          <a class="item" href="registro-electronico-de-jornada.html"><span class="ico-m"><i data-lucide="clock"></i></span><b>Registro de jornada</b><small>Fichaje legal del equipo</small></a>
         </div>
         <div>
           <h4 class="mono">Documentos</h4>
@@ -60,10 +61,10 @@
         </div>
         <div>
           <h4 class="mono">Finanzas</h4>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="receipt"></i></span><b>Facturación</b><small>Factura electrónica en un clic</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="credit-card"></i></span><b>Pagos online</b><small>Cobra antes y sin perseguir</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="timer"></i></span><b>Tiempos y gastos</b><small>Cada hora, registrada</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="chart-column"></i></span><b>Informes financieros</b><small>Cómo va tu negocio, de un vistazo</small></a>
+          <a class="item" href="facturacion-electronica.html"><span class="ico-m"><i data-lucide="receipt"></i></span><b>Facturación</b><small>Factura electrónica en un clic</small></a>
+          <a class="item" href="pagos-en-linea.html"><span class="ico-m"><i data-lucide="credit-card"></i></span><b>Pagos online</b><small>Cobra antes y sin perseguir</small></a>
+          <a class="item" href="seguimiento-de-tiempo-y-gastos.html"><span class="ico-m"><i data-lucide="timer"></i></span><b>Tiempos y gastos</b><small>Cada hora, registrada</small></a>
+          <a class="item" href="informes-financieros.html"><span class="ico-m"><i data-lucide="chart-column"></i></span><b>Informes financieros</b><small>Cómo va tu negocio, de un vistazo</small></a>
         </div>
         <div>
           <h4 class="mono">Clientes</h4>
@@ -77,11 +78,10 @@
         </div>
         <div class="mega-destacado">
           <h4 class="mono">IA e integraciones</h4>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="sparkles"></i></span><b>Copiloto Legal <span class="nuevo">NUEVO</span></b><small>Resume escritos y detecta plazos</small></a>
+          <a class="item" href="copiloto-legal.html"><span class="ico-m"><i data-lucide="sparkles"></i></span><b>Copiloto Legal <span class="nuevo">NUEVO</span></b><small>Resume escritos y detecta plazos</small></a>
           <a class="item" href="#"><span class="ico-m"><i data-lucide="bot"></i></span><b>Asistente de documentos legales</b><small>Redacta y revisa contigo</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="inbox"></i></span><b>LexNet</b><small>Notificaciones dentro de la plataforma</small></a>
+          <a class="item" href="lexnet.html"><span class="ico-m"><i data-lucide="inbox"></i></span><b>LexNet</b><small>Notificaciones dentro de la plataforma</small></a>
           <a class="item" href="#"><span class="ico-m"><i data-lucide="plug"></i></span><b>Integraciones</b><small>Conecta tus herramientas</small></a>
-          <a class="ver-todo" href="index.html#plataforma">Ver todas las funcionalidades →</a>
         </div>
       </div>
     </div>
@@ -92,23 +92,23 @@
         <div>
           <h4 class="mono">Por sector</h4>
           <div class="dos-columnas">
-            <a class="item" href="index.html#sectores"><span class="ico-m"><i data-lucide="gavel"></i></span><b>Despachos de abogados</b><small>Plazos, LexNet y expedientes</small></a>
-            <a class="item" href="index.html#sectores"><span class="ico-m"><i data-lucide="briefcase"></i></span><b>Consultoras</b><small>Proyectos y horas facturables</small></a>
-            <a class="item" href="index.html#sectores"><span class="ico-m"><i data-lucide="calculator"></i></span><b>Asesorías y gestorías</b><small>Clientes y documentación</small></a>
-            <a class="item" href="index.html#sectores"><span class="ico-m"><i data-lucide="building-2"></i></span><b>Administración de fincas</b><small>Comunidades, juntas y actas</small></a>
-            <a class="item" href="index.html#sectores"><span class="ico-m"><i data-lucide="users-round"></i></span><b>Empresas con plantilla</b><small>Equipo, jornada y tareas</small></a>
+            <a class="item" href="software-abogados.html"><span class="ico-m"><i data-lucide="gavel"></i></span><b>Despachos de abogados</b><small>Plazos, LexNet y expedientes</small></a>
+            <a class="item" href="#"><span class="ico-m"><i data-lucide="briefcase"></i></span><b>Consultoras</b><small>Proyectos y horas facturables</small></a>
+            <a class="item" href="software-para-gestoria.html"><span class="ico-m"><i data-lucide="calculator"></i></span><b>Asesorías y gestorías</b><small>Clientes y documentación</small></a>
+            <a class="item" href="administracion-de-fincas.html"><span class="ico-m"><i data-lucide="building-2"></i></span><b>Administración de fincas</b><small>Comunidades, juntas y actas</small></a>
+            <a class="item" href="empresas-con-plantilla.html"><span class="ico-m"><i data-lucide="users-round"></i></span><b>Empresas con plantilla</b><small>Equipo, jornada y tareas</small></a>
           </div>
         </div>
         <div>
           <h4 class="mono">Por tamaño</h4>
-          <a class="item" href="planes.html"><span class="ico-m"><i data-lucide="user"></i></span><b>Autónomos</b><small>Empieza desde 24 €/mes</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="store"></i></span><b>Pequeñas empresas</b><small>Orden desde el primer día</small></a>
-          <a class="item" href="index.html#metodo"><span class="ico-m"><i data-lucide="building"></i></span><b>Medianas y grandes</b><small>Implantación a medida</small></a>
+          <a class="item" href="software-para-autonomos.html"><span class="ico-m"><i data-lucide="user"></i></span><b>Autónomos</b><small>Empieza desde 24 €/mes</small></a>
+          <a class="item" href="software-para-empresas-pequenas.html"><span class="ico-m"><i data-lucide="store"></i></span><b>Pequeñas empresas</b><small>Orden desde el primer día</small></a>
+          <a class="item" href="software-para-empresas-medianas-y-grandes.html"><span class="ico-m"><i data-lucide="building"></i></span><b>Medianas y grandes</b><small>Implantación a medida</small></a>
         </div>
         <div class="mega-destacado">
           <h4 class="mono">¿No ves tu sector?</h4>
           <p>Adaptamos la plataforma a cómo trabaja tu equipo.</p>
-          <a class="ver-todo" href="index.html#contacto">Hablar con un consultor →</a>
+          <a class="ver-todo" href="#contacto">Hablar con un consultor →</a>
         </div>
       </div>
     </div>
@@ -118,14 +118,15 @@
       <div class="contenedor mega-grid mega-sectores">
         <div>
           <h4 class="mono">Software por profesión</h4>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="scale"></i></span><b>Software para abogados</b><small>Expedientes, plazos y LexNet</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="calculator"></i></span><b>Software para gestoría</b><small>Clientes, trámites y documentación</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="stamp"></i></span><b>Software para procuradores</b><small>Notificaciones y plazos al día</small></a>
+          <a class="item" href="software-abogados.html"><span class="ico-m"><i data-lucide="scale"></i></span><b>Software para abogados</b><small>Expedientes, plazos y LexNet</small></a>
+          <a class="item" href="software-para-gestoria.html"><span class="ico-m"><i data-lucide="calculator"></i></span><b>Software para gestoría</b><small>Clientes, trámites y documentación</small></a>
+          <a class="item" href="software-para-procuradores.html"><span class="ico-m"><i data-lucide="stamp"></i></span><b>Software para procuradores</b><small>Notificaciones y plazos al día</small></a>
         </div>
         <div>
           <h4 class="mono">Servicios adicionales</h4>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="shield-check"></i></span><b>Canal de denuncias</b><small>Cumple la ley de protección al informante</small></a>
-          <a class="item" href="#"><span class="ico-m"><i data-lucide="bot-message-square"></i></span><b>Chatbot + web de captación <span class="nuevo">NUEVO</span></b><small>Clientes nuevos, 24 horas al día</small></a>
+          <a class="item" href="consultoria-para-despachos.html"><span class="ico-m"><i data-lucide="compass"></i></span><b>Consultoría para despachos</b><small>Estrategia, digitalización y crecimiento</small></a>
+          <a class="item" href="canal-de-denuncias.html"><span class="ico-m"><i data-lucide="shield-check"></i></span><b>Canal de denuncias</b><small>Cumple la ley de protección al informante</small></a>
+          <a class="item" href="captacion-clientes.html"><span class="ico-m"><i data-lucide="bot-message-square"></i></span><b>Chatbot + web de captación <span class="nuevo">NUEVO</span></b><small>Clientes nuevos, 24 horas al día</small></a>
         </div>
         <div class="mega-destacado">
           <h4 class="mono">Implantación</h4>
@@ -144,7 +145,7 @@
             <a class="item" href="#"><span class="ico-m"><i data-lucide="newspaper"></i></span><b>Blog</b><small>Gestión, tecnología y novedades legales</small></a>
             <a class="item" href="#"><span class="ico-m"><i data-lucide="graduation-cap"></i></span><b>Academy</b><small>Manual de uso paso a paso</small></a>
             <a class="item" href="#"><span class="ico-m"><i data-lucide="bell"></i></span><b>Novedades</b><small>Lo último de la plataforma</small></a>
-            <a class="item" href="#"><span class="ico-m"><i data-lucide="languages"></i></span><b>English</b><small>Website in English</small></a>
+            <a class="item" href="en/index.html" data-cambiar-idioma><span class="ico-m"><i data-lucide="languages"></i></span><b>English</b><small>Website in English</small></a>
           </div>
         </div>
         <div></div>
@@ -199,6 +200,7 @@
     </div>
   </section>
 
+
   <!-- ============ CÓMO FUNCIONA (huecos para los GIF reales de la web actual) ============ -->
   <section class="bloque" id="como-funciona">
     <div class="contenedor">
@@ -207,9 +209,9 @@
         <p>Y si lo necesitas, tienes el manual completo en LexDigo Academy.</p>
       </div>
       <div class="rejilla r-3">
-        <div class="aparece"><div class="gif-hueco">Captura real: gestor de tareas</div><span class="num-paso">PASO 1</span><h3 style="font-size:22px;margin:6px 0 6px">Invita a tu equipo</h3><p style="color:var(--gris)">Compañeros y colaboradores externos, cada uno con su acceso.</p></div>
+        <div class="aparece"><img class="captura" src="img/colaboracion-tareas.png" alt="Captura de LexDigo: Invita a tu equipo" loading="lazy"><span class="num-paso">PASO 1</span><h3 style="font-size:22px;margin:6px 0 6px">Invita a tu equipo</h3><p style="color:var(--gris)">Compañeros y colaboradores externos, cada uno con su acceso.</p></div>
         <div class="aparece"><div class="gif-hueco">Captura real: permisos</div><span class="num-paso">PASO 2</span><h3 style="font-size:22px;margin:6px 0 6px">Define los permisos</h3><p style="color:var(--gris)">Decide qué asuntos y documentos ve cada persona.</p></div>
-        <div class="aparece"><div class="gif-hueco">Captura real: gestión de casos</div><span class="num-paso">PASO 3</span><h3 style="font-size:22px;margin:6px 0 6px">Trabajad juntos</h3><p style="color:var(--gris)">Comentad, compartid documentos y seguid cada versión.</p></div>
+        <div class="aparece"><img class="captura" src="img/colaboracion-casos.png" alt="Captura de LexDigo: Trabajad juntos" loading="lazy"><span class="num-paso">PASO 3</span><h3 style="font-size:22px;margin:6px 0 6px">Trabajad juntos</h3><p style="color:var(--gris)">Comentad, compartid documentos y seguid cada versión.</p></div>
       </div>
     </div>
   </section>
@@ -320,6 +322,6 @@
   </footer>
 
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
